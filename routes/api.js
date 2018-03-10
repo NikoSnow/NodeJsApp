@@ -13,6 +13,32 @@ router.get('/obtenerEstudiante',function(req,res){
     });
 }); 
 
+//Eliminar estudiante
+router.get('/eliminarEstudiante/:id',function(req,res){
+    let idEstudiante = req.params.id;
+    models.Estudiantes.find(
+            {
+                where: {
+                    idEstudiante:{
+                        [models.Sequelize.Op.eq]: idEstudiante
+                    }
+                }
+            }
+        )
+        .then((lista)=>{
+            lista.destroy()
+            .then(()=>{
+                res.json({});
+            })
+            .catch((error)=>{
+                res.json(error);
+            });
+        })
+        .catch((error)=>{
+            res.json(error);
+        });
+});
+
 //Obtener estudiante por ID
 router.get('/obtenerEstudiante/:id',function(req,res){
     let idEstudiante = req.params.id;
