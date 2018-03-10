@@ -2,8 +2,13 @@
     "development":{
         "username": "xhbhkojjazcsvc",
         "password": "7c161ff2292ada7f1ac2c670b87f1e3e15fbb42d32442103539c03e4992d862f",
-        "database": "postgresql-flat-36981",
+        "database": "dctsh1kibj049v",
         "host": "ec2-50-16-217-122.compute-1.amazonaws.com",
+        "port": 5432,
+        "dialectOptions":{
+            "ssl": true
+        },
+        "ssl": true,
         "dialect":"postgres",
         "operatorsAliases": false
 
@@ -11,16 +16,26 @@
     "test":{
         "username": "xhbhkojjazcsvc",
         "password": "7c161ff2292ada7f1ac2c670b87f1e3e15fbb42d32442103539c03e4992d862f",
-        "database": "postgresql-flat-36981",
+        "database": "dctsh1kibj049v",
         "host": "ec2-50-16-217-122.compute-1.amazonaws.com",
+        "port": 5432,
+        "dialectOptions":{
+            "ssl": true
+        },
+        "ssl": true,
         "dialect":"postgres",
         "operatorsAliases": false
     },
     "production":{
         "username": "xhbhkojjazcsvc",
         "password": "7c161ff2292ada7f1ac2c670b87f1e3e15fbb42d32442103539c03e4992d862f",
-        "database": "postgresql-flat-36981",
+        "database": "dctsh1kibj049v",
         "host": "ec2-50-16-217-122.compute-1.amazonaws.com",
+        "port": 5432,
+        "dialectOptions":{
+            "ssl": true
+        },
+        "ssl": true,
         "dialect":"postgres",
         "operatorsAliases": false
     }

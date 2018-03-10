@@ -9,7 +9,9 @@ var bodyParser = require('body-parser');
 //Modelo de las Tablas
 var models = require('./models/index');
 
+//Rutas de la aplicacion
 var index = require('./routes/index');
+var api = require('./routes/api');
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+//exponiendo api en mi url/api
+app.use('/api', api);
 
 models.sequelize.sync().then(
   function(){
